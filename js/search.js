@@ -9,9 +9,9 @@ input.addEventListener("keyup", function(event){
 });
 
 function wikiopen(){
-	if($("#text-search").val().length !=0){
-	searchBoxValue = $("#text-search").val();
-	$("#contant").empty();
+	if(document.getElementById("text-search").value !=""){
+	searchBoxValue = document.getElementById("text-search").value;
+	document.getElementById("contant").innerHTML = "";
 	url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&titles=&utf8=1&srsearch=' + searchBoxValue + '&srlimit=15';
 	// alert(url);
 	$.ajax({
